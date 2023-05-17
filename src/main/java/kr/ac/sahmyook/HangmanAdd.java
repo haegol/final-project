@@ -20,8 +20,10 @@ public class HangmanAdd {
         do {
 
             if (answer.equals(String.valueOf(blank))) {
-                System.out.println("축하드립니다. 정답을 맞추셨습니다! GAME CLEAR");
+                System.out.println("축하드립니다. 정답을 맞추셨습니다!");
+                System.out.println("=================================");
                 Score.count(fail);
+                System.out.println("GAME CLEAR");
                 break;
             }
 
@@ -51,7 +53,6 @@ public class HangmanAdd {
                     System.out.println("정답 단어에 존재하지 않는 알파벳입니다." + hangman[fail - 1] + " 이(가) 생겼습니다. (기회 : " + (10 - fail) + "번)");
                     if((10-fail) == 0){
                         System.out.println("행맨이 완성되었습니다. GAME OVER");
-                        Score.count(fail);
                         break;
                     }
                 }
@@ -59,8 +60,10 @@ public class HangmanAdd {
             }
             else {
                 if (answer.equals(userAnswer)) {
-                    System.out.println("축하드립니다. 정답을 맞추셨습니다! GAME CLEAR");
+                    System.out.println("축하드립니다. 정답을 맞추셨습니다!");
+                    System.out.println("=================================");
                     Score.count(fail);
+                    System.out.println("GAME CLEAR");
                     break;
                 } else {
                     fail++;
