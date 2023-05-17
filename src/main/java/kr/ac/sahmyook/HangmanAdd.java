@@ -1,6 +1,5 @@
 package kr.ac.sahmyook;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class HangmanAdd {
@@ -8,6 +7,7 @@ public class HangmanAdd {
         String[] hangman = {"머리", "몸통", "왼팔", "오른팔", "왼다리", "오른다리", "왼쪽 눈", "오른쪽 눈", "코", "입"};
         Scanner sc = new Scanner(System.in);
         RandomWords rdw = new RandomWords();
+        Score score = new Score();
         String answer = (String) rdw.randomWord(n); // randomWord에서 정답 단어 추출
         char[] answerArr = answer.toCharArray(); //정답 단어의 각 알파벳 배열
         char[] blank = new char[answerArr.length]; //정답 단어길이만큼의 빈칸 배열
@@ -20,7 +20,8 @@ public class HangmanAdd {
         do {
 
             if (answer.equals(String.valueOf(blank))) {
-                System.out.println("축하드립니다. 정답을 맞추셨습니다!");
+                System.out.println("축하드립니다. 정답을 맞추셨습니다! GAME CLEAR");
+                Score.count(fail);
                 break;
             }
 
@@ -50,6 +51,7 @@ public class HangmanAdd {
                     System.out.println("정답 단어에 존재하지 않는 알파벳입니다." + hangman[fail - 1] + " 이(가) 생겼습니다. (기회 : " + (10 - fail) + "번)");
                     if((10-fail) == 0){
                         System.out.println("행맨이 완성되었습니다. GAME OVER");
+                        Score.count(fail);
                         break;
                     }
                 }
@@ -57,7 +59,8 @@ public class HangmanAdd {
             }
             else {
                 if (answer.equals(userAnswer)) {
-                    System.out.println("축하드립니다. 정답을 맞추셨습니다!");
+                    System.out.println("축하드립니다. 정답을 맞추셨습니다! GAME CLEAR");
+                    Score.count(fail);
                     break;
                 } else {
                     fail++;
