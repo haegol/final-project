@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class HangmanAdd {
-    public void gameStart(int n) throws IOException {
+    public void gameStart(int n) {
         String[] hangman = {"머리", "몸통", "왼팔", "오른팔", "왼다리", "오른다리", "왼쪽 눈", "오른쪽 눈", "코", "입"};
         Scanner sc = new Scanner(System.in);
         RandomWords rdw = new RandomWords();
@@ -23,6 +23,7 @@ public class HangmanAdd {
                 System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                 break;
             }
+
             //빈칸(_) 출력
             System.out.println();
             System.out.println("빈 칸에 들어갈 알파벳을 예측해서 입력해주세요 : ");
@@ -47,6 +48,10 @@ public class HangmanAdd {
                     fail++;
                     System.out.println("=================================");
                     System.out.println("정답 단어에 존재하지 않는 알파벳입니다." + hangman[fail - 1] + " 이(가) 생겼습니다. (기회 : " + (10 - fail) + "번)");
+                    if((10-fail) == 0){
+                        System.out.println("행맨이 완성되었습니다. GAME OVER");
+                        break;
+                    }
                 }
 
             }
