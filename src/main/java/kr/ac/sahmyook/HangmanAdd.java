@@ -22,7 +22,7 @@ public class HangmanAdd {
             if (answer.equals(String.valueOf(blank))) {
                 System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                 System.out.println("=================================");
-                Score.count(fail);                                                        //점수계산
+                Score.count(fail);      //점수계산
                 System.out.println("GAME CLEAR");
                 break;
             }
