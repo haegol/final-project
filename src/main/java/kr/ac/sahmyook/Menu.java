@@ -38,6 +38,7 @@ public class Menu {
                     }
              }
         }
+  
     public static void difficultyHigh(){
 
         RandomWords rdw = new RandomWords();
