@@ -7,7 +7,7 @@ public class HangmanAdd {
         String[] hangman = {"머리", "몸통", "왼팔", "오른팔", "왼다리", "오른다리", "왼쪽 눈", "오른쪽 눈", "코", "입"};
         Scanner sc = new Scanner(System.in);                                              //사용자 입력받기
         RandomWords rdw = new RandomWords();                                              //RandomWord 선언 (정답용 랜덤 영단어 클래스)
-        HangmanScore score = new Score();                                                 //Score 선언 (점수계산 클래스)
+        Score score = new Score();                                                 //Score 선언 (점수계산 클래스)
         String answer = (String) rdw.randomWord(n);                                       //정답 단어 추출
         char[] answerArr = answer.toCharArray();                                          //정답 단어의 각 알파벳 배열
         char[] blank = new char[answerArr.length];                                        //정답 단어 길이만큼의 빈칸 배열
