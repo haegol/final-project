@@ -38,19 +38,23 @@ public class Menu {
                     }
              }
         }
-    public void gameStart(){
-
-    }
-
-
+  
     public static void difficultyHigh(){
-        System.out.println("난이도 상 출력");
+
+        RandomWords rdw = new RandomWords();
+        String word = (String) rdw.randomWord(1);
     }
     public static void difficultyMiddle(){
-        System.out.println("난이도 중 출력");
+
+        RandomWords rdw = new RandomWords();
+        String word = (String) rdw.randomWord(2);
     }
     public static void difficultyLow(){
-        System.out.println("난이도 하 출력");
+
+        RandomWords rdw = new RandomWords();
+        String word = (String) rdw.randomWord(3);
     }
+
+
 
 }
