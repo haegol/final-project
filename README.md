@@ -24,7 +24,7 @@
 
 ### 3. 단어 랜덤돌리기
 
-- 상 : 다섯글자 {apple, alien, actor, beach, black, brain, camel, chair, clock}   
+- 상 : 다섯글자 {grape, alien, actor, beach, black, brain, camel, chair, clock}   
 - 중 : 네글자 {bear, desk, face, game, home, king, lady, word, skin}   
 - 하 : 세글자 {cat, dog, got, cap, pen, cup, hug, zip, tea}   
 
