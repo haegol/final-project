@@ -41,17 +41,17 @@ public class Menu {
     public static void difficultyHigh(){
 
         RandomWords rdw = new RandomWords();
-        String word1 = (String) rdw.randomWord(1);
+        String word = (String) rdw.randomWord(1);
     }
     public static void difficultyMiddle(){
 
         RandomWords rdw = new RandomWords();
-        String word2 = (String) rdw.randomWord(2);
+        String word = (String) rdw.randomWord(2);
     }
     public static void difficultyLow(){
 
         RandomWords rdw = new RandomWords();
-        String word3 = (String) rdw.randomWord(3);
+        String word = (String) rdw.randomWord(3);
     }
 
 
