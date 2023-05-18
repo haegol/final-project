@@ -6,8 +6,6 @@ public class HangmanAdd {
     public void gameStart(String answer) {
         String[] hangman = {"머리", "몸통", "왼팔", "오른팔", "왼다리", "오른다리", "왼쪽 눈", "오른쪽 눈", "코", "입"};
         Scanner sc = new Scanner(System.in);                                              //사용자 입력받기
-        RandomWords rdw = new RandomWords();                                              //RandomWord 선언 (정답용 랜덤 영단어 클래스)
-        Score score = new Score();                                                 //Score 선언 (점수계산 클래스)
         char[] answerArr = answer.toCharArray();                                          //정답 단어의 각 알파벳 배열
         char[] blank = new char[answerArr.length];                                        //정답 단어 길이만큼의 빈칸 배열
         for (int i = 0; i < answerArr.length; i++) {
@@ -21,7 +19,7 @@ public class HangmanAdd {
             if (answer.equals(String.valueOf(blank))) {
                 System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                 System.out.println("=================================");
-                Score.count(fail);                          //점수계산
+                HangmanScore.count(fail);                          //점수계산
                 System.out.println("정답 : " + answer);
                 System.out.println("GAME CLEAR");
 
@@ -66,7 +64,7 @@ public class HangmanAdd {
                 if (answer.equals(userAnswer)) {
                     System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                     System.out.println("=================================");
-                    Score.count(fail);
+                    HangmanScore.count(fail);
                     System.out.println("정답 : " + answer);
                     System.out.println("GAME CLEAR");
 
