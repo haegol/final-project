@@ -4,11 +4,11 @@ import java.util.Collections;
 import java.util.ArrayList;
 
 public class RandomWords {
-    public Object randomWord(int no){
+    public String randomWord(int no){
     String rdword = null;
-    ArrayList<String> arr1 = new ArrayList<String>(Arrays.asList("grape", "alien", "acter", "beach", "black", "brain", "camel", "chair", "clock"));
-    ArrayList<String> arr2 = new ArrayList<String>(Arrays.asList("bear", "desk", "face", "game", "home", "king", "lady", "word", "skin"));
-    ArrayList<String> arr3 = new ArrayList<String>(Arrays.asList("cat", "dog", "got", "cap", "pen","cup","hug", "zip", "tea"));
+    ArrayList<String> arr1 = new ArrayList<>(Arrays.asList("grape", "alien", "acter", "beach", "black", "brain", "camel", "chair", "clock"));
+    ArrayList<String> arr2 = new ArrayList<>(Arrays.asList("bear", "desk", "face", "game", "home", "king", "lady", "word", "skin"));
+    ArrayList<String> arr3 = new ArrayList<>(Arrays.asList("cat", "dog", "got", "cap", "pen","cup","hug", "zip", "tea"));
 
 
     switch(no) {
