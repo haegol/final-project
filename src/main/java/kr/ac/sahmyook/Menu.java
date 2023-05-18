@@ -28,26 +28,41 @@ public class Menu {
                 case 4:
                     System.out.println("정말로 종료 하시겠습니까? (예:y 아니오:n) :");
                     String exit = sc.next();
-                    if (exit == "y") {
+                    if (exit.equals("y")) {
                         System.exit(0);
                     } else mainMenu();
                     break;
                 default:
-                    if (no > 4 || no < 0) {
+                    if (no > 4 || no < 1) {
                         mainMenu();
                     }
              }
+
         }
 
 
     public static void difficultyHigh(){
-        System.out.println("난이도 상 출력");
+
+        RandomWords rdw = new RandomWords();
+        String answer = rdw.randomWord(1);
+        HangmanAdd hangman = new HangmanAdd();
+        hangman.gameStart(answer);
+        mainMenu();
     }
     public static void difficultyMiddle(){
-        System.out.println("난이도 중 출력");
+
+        RandomWords rdw = new RandomWords();
+        String answer = rdw.randomWord(2);
+        HangmanAdd hangman = new HangmanAdd();
+        hangman.gameStart(answer);
+        mainMenu();
     }
     public static void difficultyLow(){
-        System.out.println("난이도 하 출력");
-    }
 
+        RandomWords rdw = new RandomWords();
+        String answer = rdw.randomWord(3);
+        HangmanAdd hangman = new HangmanAdd();
+        hangman.gameStart(answer);
+        mainMenu();
+    }
 }
