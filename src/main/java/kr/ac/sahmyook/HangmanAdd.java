@@ -7,7 +7,7 @@ public class HangmanAdd {
         String[] hangman = {"머리", "몸통", "왼팔", "오른팔", "왼다리", "오른다리", "왼쪽 눈", "오른쪽 눈", "코", "입"};
         Scanner sc = new Scanner(System.in);                                              //사용자 입력받기
         RandomWords rdw = new RandomWords();                                              //RandomWord 선언 (정답용 랜덤 영단어 클래스)
-        Score score = new Score();                                                        //Score 선언 (점수계산 클래스)
+        HangmanScore score = new Score();                                                 //Score 선언 (점수계산 클래스)
         String answer = (String) rdw.randomWord(n);                                       //정답 단어 추출
         char[] answerArr = answer.toCharArray();                                          //정답 단어의 각 알파벳 배열
         char[] blank = new char[answerArr.length];                                        //정답 단어 길이만큼의 빈칸 배열
@@ -23,7 +23,9 @@ public class HangmanAdd {
                 System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                 System.out.println("=================================");
                 Score.count(fail);                          //점수계산
+                System.out.println("정답 : " + answer);
                 System.out.println("GAME CLEAR");
+
                 break;
             }
 
@@ -54,6 +56,7 @@ public class HangmanAdd {
                     System.out.println("정답 단어에 존재하지 않는 알파벳입니다." + hangman[fail - 1] + " 이(가) 생겼습니다. (기회 : " + (10 - fail) + "번)");
                     if((10-fail) == 0){
                         System.out.println("행맨이 완성되었습니다. GAME OVER");
+                        System.out.println("정답 : " + answer);
                         break;
                     }
                 }
@@ -65,7 +68,9 @@ public class HangmanAdd {
                     System.out.println("축하드립니다. 정답을 맞추셨습니다!");
                     System.out.println("=================================");
                     Score.count(fail);
+                    System.out.println("정답 : " + answer);
                     System.out.println("GAME CLEAR");
+
                     break;
                 } else {
                     fail++;
