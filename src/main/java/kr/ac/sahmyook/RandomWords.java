@@ -10,7 +10,6 @@ public class RandomWords {
     ArrayList<String> arr2 = new ArrayList<>(Arrays.asList("bear", "desk", "face", "game", "home", "king", "lady", "word", "skin"));
     ArrayList<String> arr3 = new ArrayList<>(Arrays.asList("cat", "dog", "got", "cap", "pen","cup","hug", "zip", "tea"));
 
-
     switch(no) {
         case 1:
             Collections.shuffle(arr1);
