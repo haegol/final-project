@@ -38,6 +38,9 @@ public class Menu {
                     }
              }
         }
+    public void gameStart(){
+
+    }
 
 
     public static void difficultyHigh(){
