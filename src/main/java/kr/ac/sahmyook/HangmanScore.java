@@ -3,7 +3,6 @@ package kr.ac.sahmyook;
 public class HangmanScore {
     public static void count(int fail) {
 
-
         if (fail >= 10) {
             System.out.println("0점 입니다.");
         } else if (fail >= 8) {
