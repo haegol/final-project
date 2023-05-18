@@ -41,7 +41,7 @@ public class Menu {
         }
 
 
-    public static void difficultyHigh(){
+    public static void difficultyHigh(){       //난이도 상
 
         RandomWords rdw = new RandomWords();
         String answer = rdw.randomWord(1);
@@ -49,7 +49,7 @@ public class Menu {
         hangman.gameStart(answer);
         mainMenu();
     }
-    public static void difficultyMiddle(){
+    public static void difficultyMiddle(){       //난이도 중
 
         RandomWords rdw = new RandomWords();
         String answer = rdw.randomWord(2);
@@ -57,7 +57,7 @@ public class Menu {
         hangman.gameStart(answer);
         mainMenu();
     }
-    public static void difficultyLow(){
+    public static void difficultyLow(){       //난이도 하
 
         RandomWords rdw = new RandomWords();
         String answer = rdw.randomWord(3);
